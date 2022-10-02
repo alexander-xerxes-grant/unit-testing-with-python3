@@ -13,6 +13,7 @@ class PhoneBookTest(unittest.TestCase):
         self.assertEqual("12345", number)
     
     def test_missing_name(self):
+        
         phonebook = Phonebook()
 
         with self.assertRaises(KeyError):
