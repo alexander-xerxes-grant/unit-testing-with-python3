@@ -7,9 +7,6 @@ class PhoneBookTest(unittest.TestCase):
     def setUp(self) -> None:
         self.phonebook = Phonebook()
 
-    def tearDown(self) -> None:
-        pass
-
     def test_lookup_by_name(self):
 
         self.phonebook.add("Bob", "12345")
@@ -25,4 +22,4 @@ class PhoneBookTest(unittest.TestCase):
     @unittest.skip("WIP")
     def test_empty_phonebook_is_consistent(self):
 
-        self.assertTrue(phonebook.is_consistent())
+        self.assertTrue(self.phonebook.is_consistent())
