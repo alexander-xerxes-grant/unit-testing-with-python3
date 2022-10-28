@@ -1,6 +1,4 @@
-from unicodedata import name
-
-from Module 3 Unit Testing with pytest.phonebook import Phonebook
+from module_3_unit_testing_with_pytest.phonebook import Phonebook
 
 
 def test_lookup_by_name():
