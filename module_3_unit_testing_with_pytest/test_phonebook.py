@@ -21,7 +21,5 @@ def test_missing_name_raises_error():
     phonebook = Phonebook()
     phonebook.add("Alex", "12345")
 
-    with pytest.raises(KeyError) as error:
-        phonebook.lookup("John")
-
-    assert error.type == KeyError
+    with pytest.raises(KeyError):
+        phonebook.lookup("Alex")
