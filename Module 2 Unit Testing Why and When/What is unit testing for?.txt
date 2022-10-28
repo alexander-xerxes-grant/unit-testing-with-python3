@@ -1,0 +1,24 @@
+- Understanding the unit's of code you want to build
+    - Tests may make you collaborate with a broad range of people involved with your code
+    - Even if writing tests for yourself, unit testing will help you think things through in detail
+
+
+
+
+- They also document the units of code
+    - specify the behaviour of the unit under test
+    - how the originial developer inteded the unit to be used
+
+- Help design the units
+    - code must then have units
+        - loosely coupled
+        - high cohesion
+    - unit tests are like a headline, and units are like the article
+    - being forced to write headlines (unit tests) first, should improve the design of your article (units)
+    - allows for refactoring
+
+- Help avoid regression issues in future
+    - regression is when something used to work, but no longer does
+    - if you change something, the tests should quickly alert you to what part of the code went wrong
+
+
