@@ -22,4 +22,4 @@ def test_missing_name_raises_error():
     phonebook.add("Alex", "12345")
 
     with pytest.raises(KeyError):
-        phonebook.lookup("Alex")
+        phonebook.lookup("John")
