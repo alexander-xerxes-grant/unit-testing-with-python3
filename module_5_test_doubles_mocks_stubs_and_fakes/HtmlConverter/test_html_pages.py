@@ -29,8 +29,8 @@ from html_pages import (
 )
 
 
-def test_conver_quotes():
+def test_convert_quotes():
     fake_file = io.StringIO("quote: ' ")
     converter = HtmlPagesConverter(open_file=fake_file)
     converted_text = converter.get_html_page(0)
-    assert converted_text == "quote: ' "
+    assert converted_text == "quote: &#x27;<br />"
