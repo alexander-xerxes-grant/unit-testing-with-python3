@@ -4,9 +4,8 @@ from module_3_unit_testing_with_pytest.phonebook import Phonebook
 
 
 @pytest.fixture
-def phonebook():
-    phonebook = Phonebook()
-    return phonebook
+def phonebook(tmpdir):
+    return Phonebook(tmpdir)
 
 
 def test_lookup_by_name(phonebook):

@@ -1,9 +1,11 @@
-from zlib import DEF_BUF_SIZE
+import os
 
 
 class Phonebook:
-    def __init__(self) -> None:
+    def __init__(self, cache_directory) -> None:
         self.numbers = {}
+        self.filename = os.path.join(cache_directory, "phonebook.txt")
+        self.cache = open(self.filename, "w")
 
     def add(self, name, number):
         self.numbers[name] = number
@@ -13,3 +15,7 @@ class Phonebook:
 
     def names(self):
         return set(self.numbers.keys())
+
+    def clear(self):
+        self.cache.close()
+        os.remove(self.filename)
