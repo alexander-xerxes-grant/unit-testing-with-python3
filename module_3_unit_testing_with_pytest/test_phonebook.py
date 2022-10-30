@@ -5,6 +5,7 @@ from module_3_unit_testing_with_pytest.phonebook import Phonebook
 
 @pytest.fixture
 def phonebook(tmpdir):
+    "Provide an empty Phonebook object."
     return Phonebook(tmpdir)
 
 
