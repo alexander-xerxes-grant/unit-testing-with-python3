@@ -16,3 +16,4 @@ class Sensor(object):
         # simulates a real sensor in a real tire
         pressure_telemetry_value = 6 * random.random() * random.random()
         return pressure_telemetry_value
+

@@ -2,7 +2,6 @@ from sensor import Sensor
 
 
 class Alarm:
-
     def __init__(self):
         self._low_pressure_threshold = 17
         self._high_pressure_threshold = 21
@@ -11,8 +10,10 @@ class Alarm:
 
     def check(self):
         pressure = self._sensor.sample_pressure()
-        if pressure < self._low_pressure_threshold \
-                or self._high_pressure_threshold < pressure:
+        if (
+            pressure < self._low_pressure_threshold
+            or self._high_pressure_threshold < pressure
+        ):
             self._is_alarm_on = True
 
     @property
